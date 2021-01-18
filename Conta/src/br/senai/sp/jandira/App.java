@@ -6,28 +6,32 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		Conta contaAnaMaria;
-		Conta contaPedro;
+		Conta contaDaAna = new Conta();
+		Conta contaDoJoao = new Conta();
 		
-		contaAnaMaria = new Conta();
-		contaPedro = new Conta();
+		contaDaAna.titular = "Ana Gomes";
+		contaDaAna.numero = "111-98";
+		contaDaAna.tipo = "Corrente";
+		contaDaAna.ativa = true;
+		contaDaAna.chequeEspecial = 200;
+		contaDaAna.depositar(100);
+		contaDaAna.consultarSaldo();
+		contaDaAna.depositar(30);
+		contaDaAna.consultarSaldo();
+		contaDaAna.sacar(50);
+		contaDaAna.consultarSaldo();
+		contaDaAna.sacar(50);
+		contaDaAna.consultarSaldo();
+		contaDaAna.sacar(80);
+		contaDaAna.consultarSaldo();
+		contaDaAna.depositar(100);
+		contaDaAna.consultarSaldo();
+		contaDaAna.getSaldo();
 		
-		// *** CONTA DA MARIA
-		contaAnaMaria.numero = "111-0";
-		contaAnaMaria.titular = "Ana Maria Braga";
-		contaAnaMaria.tipo = "Corrente";
-		contaAnaMaria.ativa = true;
-		contaAnaMaria.depositar(100);
-		contaAnaMaria.consultarSaldo();
-		contaAnaMaria.depositar(300);
-		contaAnaMaria.consultarSaldo();
-		
-		// *** CONTA DO PEDRO
-		contaPedro.numero = "222-0";
-		contaPedro.titular = "Pedro Cabral";
-		contaPedro.tipo = "Poupança";
-		contaPedro.ativa = true;
-		
+		 int a = somar(1,6);
 	}
-
+	private static int somar(int valor1, int valor2) {
+		int resultado = valor1 + valor2;
+		return resultado;
+	}
 }

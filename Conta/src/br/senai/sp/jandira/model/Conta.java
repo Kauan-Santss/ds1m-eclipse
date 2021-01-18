@@ -7,21 +7,35 @@ public class Conta {
 	public String numero;
 	public String titular;
 	public boolean ativa;
+	public double chequeEspecial;
 	
 	public void depositar(double valorDeposito) {
-		if (valorDeposito < 0) {
-			System.out.println("O valor do deposito deve ser maior que zero");
+		if (valorDeposito > 0) {
+			saldo += valorDeposito;
 		}
 		else {
-			saldo = saldo + valorDeposito;
+			System.out.println("Valor Inválido!!!");
 		}
 	}
+	
 	public void consultarSaldo() {
-		System.out.println("Saldo da Conta: R$" + saldo);
+		System.out.println("Saldo: R$" + saldo);
+		System.out.println("Saldo + Limite: R$" + (saldo + chequeEspecial));
 	}
-	public void sacar() {
-		
+	
+	public double getSaldo() {
+		return saldo;
 	}
+	
+	public void sacar(double valorDoSaque) {
+		if ((saldo + chequeEspecial) >= valorDoSaque) {
+			saldo -= valorDoSaque;
+		}
+		else {
+			System.out.println("Valor Insuficiente!!!");
+		}
+	}
+	
 	public void transferir() {
 		
 	}
