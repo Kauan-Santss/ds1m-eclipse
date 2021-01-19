@@ -28,8 +28,10 @@ public class App {
 		contaDaAna.consultarSaldo();
 		contaDaAna.getSaldo();
 		
-		double saldoDaConta = contaDaAna.getSaldo();
-		
-		System.out.println("Saldo da conta: R$" + saldoDaConta);
+		 int a = somar(1,6);
+	}
+	private static int somar(int valor1, int valor2) {
+		int resultado = valor1 + valor2;
+		return resultado;
 	}
 }
