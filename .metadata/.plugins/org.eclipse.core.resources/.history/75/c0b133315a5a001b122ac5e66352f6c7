@@ -2,24 +2,12 @@ package br.senai.sp.jandira.model;
 
 public class Conta {
 	
-	private String tipo;
+	public String tipo;
 	private double saldo;
 	public String numero;
 	public String titular;
 	public boolean ativa;
 	public double chequeEspecial;
-	
-	// *** Métodos de acesso aos atributos da classe
-	// *** getters and setters
-	
-	public void setTipo(String tipo) {
-		if (tipo.contentEquals("Corrente") || tipo.equals("Poupança")) {
-		this.tipo = tipo;
-		}
-		else {
-			System.out.println("O tipo de conta deve ser Corrente ou Poupança");
-		}
-	}
 	
 	public void depositar(double valorDeposito) {
 		if (valorDeposito > 0) {

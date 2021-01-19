@@ -12,13 +12,8 @@ public class Conta {
 	// *** Métodos de acesso aos atributos da classe
 	// *** getters and setters
 	
-	public void setTipo(String tipo) {
-		if (tipo.contentEquals("Corrente") || tipo.equals("Poupança")) {
-		this.tipo = tipo;
-		}
-		else {
-			System.out.println("O tipo de conta deve ser Corrente ou Poupança");
-		}
+	public void setTipo(String tipoDaConta) {
+		
 	}
 	
 	public void depositar(double valorDeposito) {
