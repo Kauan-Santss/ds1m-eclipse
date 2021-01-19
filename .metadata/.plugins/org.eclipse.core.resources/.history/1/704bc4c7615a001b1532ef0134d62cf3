@@ -17,7 +17,7 @@ public class Conta {
 		this.tipo = tipo;
 		}
 		else {
-			System.out.println("O tipo de conta deve ser: Corrente ou Poupança");
+			System.out.println("O tipo de conta deve ser Corrente ou Poupança");
 		}
 	}
 	
