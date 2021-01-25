@@ -1,38 +1,43 @@
 package br.senai.sp.jandira;
 
+import br.senai.sp.jandira.model.Cliente;
 import br.senai.sp.jandira.model.Conta;
 
 public class App {
 
 	public static void main(String[] args) {
 		// *** Conta da Ana
-		Conta contaDaAna = new Conta();
+		Conta contaAnaGomes = new Conta();
 		Conta contaDoJoao = new Conta();
 		
-		contaDaAna.titular = "Ana Gomes";
-		contaDaAna.numero = "111-98";
-		contaDaAna.setTipo("Abóbora");
-		contaDaAna.ativa = true;
-		contaDaAna.chequeEspecial = 200;
-		contaDaAna.depositar(100);
-		contaDaAna.consultarSaldo();
-		contaDaAna.depositar(30);
-		contaDaAna.consultarSaldo();
-		contaDaAna.sacar(50);
-		contaDaAna.consultarSaldo();
-		contaDaAna.sacar(50);
-		contaDaAna.consultarSaldo();
-		contaDaAna.sacar(80);
-		contaDaAna.consultarSaldo();
-		contaDaAna.depositar(100);
-		contaDaAna.consultarSaldo();
-		contaDaAna.getSaldo();
+//		contaAnaGomes.setTitular("Ana Gomes");
+		contaAnaGomes.setNumero("111-98");
+		contaAnaGomes.setTipo("Poupança");
+		contaAnaGomes.setAtiva(true);
+		contaAnaGomes.setChequeEspecial(200);
+		contaAnaGomes.depositar(100);
+		contaAnaGomes.consultarSaldo();
+		contaAnaGomes.depositar(30);
+		contaAnaGomes.consultarSaldo();
+		contaAnaGomes.sacar(50);
+		contaAnaGomes.consultarSaldo();
+		contaAnaGomes.sacar(50);
+		contaAnaGomes.consultarSaldo();
+		contaAnaGomes.sacar(80);
+		contaAnaGomes.consultarSaldo();
+		contaAnaGomes.depositar(100);
+		contaAnaGomes.consultarSaldo();
+		contaAnaGomes.getSaldo();
 		
-		double saldoDaConta = contaDaAna.getSaldo();
+		double saldoDaConta = contaAnaGomes.getSaldo();
 		
 		System.out.println("Saldo da conta: R$" + saldoDaConta);
 		
-		// *** Conta do João
-		contaDoJoao.setTipo("Corrente");
+//		System.out.println("Titular da Conta: " + contaAnaGomes.getTitular());
+		System.out.println("Tipo de Conta: " + contaAnaGomes.getTipo());
+		System.out.println("Número da Conta: " + contaAnaGomes.getNumero());
+		System.out.println("Valor do Cheque Especial: R$" + contaAnaGomes.getChequeEspecial());
+		
+		Cliente cliente = new Cliente();
 	}
 }

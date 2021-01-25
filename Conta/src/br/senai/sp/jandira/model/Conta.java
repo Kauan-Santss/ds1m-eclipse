@@ -4,13 +4,10 @@ public class Conta {
 	
 	private String tipo;
 	private double saldo;
-	public String numero;
-	public String titular;
-	public boolean ativa;
-	public double chequeEspecial;
-	
-	// *** Métodos de acesso aos atributos da classe
-	// *** getters and setters
+	private String numero;
+	private Cliente titular; 
+	private boolean ativa;
+	private double chequeEspecial;
 	
 	public void setTipo(String tipo) {
 		if (tipo.contentEquals("Corrente") || tipo.equals("Poupança")) {
@@ -20,6 +17,42 @@ public class Conta {
 			System.out.println("O tipo de conta deve ser: Corrente ou Poupança");
 		}
 	}
+	
+	public String getTipo() {
+		return this.tipo;
+	}
+	public double getSaldo() {
+		return saldo;
+	}
+	
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+	public String getNumero() {
+		return this.numero;
+	}
+	
+	public void setTitular (Cliente titular) {
+		this.titular = titular;
+	}
+	public Cliente getTitular() {
+		return this.titular;
+	}
+	
+	public void setAtiva(boolean ativa) {
+		this.ativa = ativa;
+	}
+	public boolean isAtiva(boolean ativa) {
+		return this.ativa;
+	}
+	
+	public void setChequeEspecial(double chequeEspecial) {
+		this.chequeEspecial = chequeEspecial;
+	}
+	public double getChequeEspecial() {
+		return this.chequeEspecial;
+	}
+	
 	
 	public void depositar(double valorDeposito) {
 		if (valorDeposito > 0) {
@@ -33,10 +66,6 @@ public class Conta {
 	public void consultarSaldo() {
 		System.out.println("Saldo: R$" + saldo);
 		System.out.println("Saldo + Limite: R$" + (saldo + chequeEspecial));
-	}
-	
-	public double getSaldo() {
-		return saldo;
 	}
 	
 	public void sacar(double valorDoSaque) {

@@ -1,0 +1,16 @@
+package br.senai.sp.jandira.model;
+
+public class Cliente {
+
+	private String nome;
+	private String cpf;
+	private String telefone;
+	private String cep;
+
+	public setNome(String nome) {
+		this.nome = nome;
+	}
+	public getNome();{
+		return this.nome;
+	}
+}
